@@ -4,9 +4,10 @@
     "Description" : "MongoDB Replica Set Stack 20130621-01",
 
     "Parameters" : {
-        "KeyName" : {
-            "Description" :"Name of an existing EC2 KeyPair to enable SSH access",
-            "Type" : "String"
+        "KeyName": {
+            "Description": "The EC2 Key Pair to allow SSH access to the instances",
+            "Type": "AWS::EC2::KeyPair::KeyName",
+            "ConstraintDescription": "must be the name of an existing EC2 KeyPair."
         },
         "ClientIpAddress" : {
             "Description" : "IP accessing SSH and MongoDB ports (in CIDR format, e.g.: 126.23.2.1/24)",
