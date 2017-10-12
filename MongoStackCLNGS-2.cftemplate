@@ -131,7 +131,7 @@
         "ReplicaSetMember1" : {
             "Type" : "AWS::CloudFormation::Stack",
             "Properties" : {
-                "TemplateURL" : "https://s3-eu-west-1.amazonaws.com/mongodb-clngs/MongoNodeCLNGS-2.cftemplate",
+                "TemplateURL" : "https://s3.eu-west-2.amazonaws.com/xedicloudformationtemplates/Mongo-ReplicaNode.json",
                 "Parameters" : {
                     "KeyName" : { "Ref" : "KeyName" },
                     "InstanceType" : { "Ref" : "InstanceType" },
@@ -149,7 +149,7 @@
             "Type" : "AWS::CloudFormation::Stack",
             "DependsOn" : "ReplicaSetMember1",
             "Properties" : {
-                "TemplateURL" : "https://s3-eu-west-1.amazonaws.com/mongodb-clngs/MongoNodeCLNGS-2.cftemplate",
+                "TemplateURL" : "https://s3.eu-west-2.amazonaws.com/xedicloudformationtemplates/Mongo-ReplicaNode.json",
                 "Parameters" : {
                     "KeyName" : { "Ref" : "KeyName" },
                     "InstanceType" : { "Ref" : "InstanceType" },
